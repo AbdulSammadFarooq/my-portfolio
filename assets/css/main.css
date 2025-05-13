@@ -86,6 +86,62 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }
+.custom-card {
+  height: 100%;
+  min-height: 420px; /* Set your desired consistent height */
+}
+
+.fixed-image {
+  height: 180px; /* Fixed image height */
+  object-fit: cover; /* Ensures consistent crop/fill */
+}
+
+.certificate-item {
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  height: 100%;
+}
+
+.certificate-item img {
+  width: 80%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.certificate-item h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.certificate-item h4 {
+  font-size: 14px;
+  color: #555;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  max-height: 100vh;
+}
+
+
+/* Custom styles for carousel controls on light background */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* makes white icons black */
+  background-color: rgba(0, 0, 0, 0.5); /* optional for extra contrast */
+  border-radius: 50%;
+  padding: 10px;
+}
+
 
 .download-btn {
   background-color: #007bff; /* Blue color */
