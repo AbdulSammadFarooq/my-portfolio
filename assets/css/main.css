@@ -1446,3 +1446,24 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+  .animated-name  {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #d2dbdf;
+  text-shadow: 0 0 10px rgba(252, 255, 255, 0.8);
+  animation: floatAnimation 4s ease-in-out infinite, pulse 4s ease-in-out infinite alternate;
+}
+
+@keyframes floatAnimation {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
