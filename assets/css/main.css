@@ -132,51 +132,6 @@ h6 {
   max-height: 100vh;
 }
 
-.tech-marquee {
-  background: #121212;
-  color: #fff;
-}
-
-.marquee-wrapper {
-  overflow: hidden;
-  position: relative;
-}
-
-.marquee-content {
-  display: flex;
-  animation: scroll-left 10s linear infinite;
-  gap: 40px;
-}
-
-.tech-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 2rem;
-  min-width: 120px;
-  transition: transform 0.3s ease;
-}
-
-.tech-icon span {
-  font-size: 0.9rem;
-  margin-top: 8px;
-  color: #ccc;
-}
-
-.tech-icon:hover {
-  transform: scale(1.2);
-  color: #61dafb;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* Custom styles for carousel controls on light background */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -1440,30 +1395,79 @@ section,
   color: var(--accent-color);
 }
 
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+/* marquee tag */
+
+/* Styling the marquee section */
+.tech-marquee {
+  overflow: hidden;
+  background: #1a1a1a;
+  color: #fff;
 }
 
-  .animated-name  {
-  display: inline-block;
-  font-size: 3rem;
-  font-weight: 800;
-  color: #d2dbdf;
-  text-shadow: 0 0 10px rgba(252, 255, 255, 0.8);
-  animation: floatAnimation 4s ease-in-out infinite, pulse 4s ease-in-out infinite alternate;
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
 }
 
-@keyframes floatAnimation {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
+.marquee-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
 }
 
-@keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+.tech-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-icon span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  color: #0d6efd;
+}
+
+/* Marquee animation keyframes */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Ensure smooth looping by duplicating content */
+.marquee-content {
+  width: 200%;
+}
+
+.marquee-content > * {
+  flex: 0 0 auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .tech-icon {
+    margin: 0 1.5rem;
+  }
+  .tech-icon i {
+    font-size: 2rem;
+  }
+  .tech-icon span {
+    font-size: 0.9rem;
+  }
 }
