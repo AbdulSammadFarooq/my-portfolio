@@ -1588,6 +1588,7 @@ section,
 
 .view-btn:hover {
   opacity: 0.9;
+  color: #040b14;
 }
 
 @media (max-width: 768px) {
