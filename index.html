@@ -131,30 +131,59 @@
     <main class="main">
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
-        <img
-          src="assets/img/react-js.jpg"
-          alt=""
-          data-aos="fade-in"
-          class="hero-image"
-        />
+        <div class="hero-background">
+          <img
+            src="assets/img/react-js.jpg"
+            alt="Hero Background"
+            data-aos="fade-in"
+            class="hero-image"
+          />
+          <div class="hero-overlay"></div>
+          <div class="hero-particles"></div>
+        </div>
 
-        <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <h2 class="">Abdul Sammad</h2>
-          <p>
-            I'm
-            <span
-              class="typed"
-              data-typed-items="Full Stack Developer, MERN Stack Specialist, Software Engineer, Web3 Developer"
-              >Web3 Developer</span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span
-            ><span
-              class="typed-cursor typed-cursor--blink"
-              aria-hidden="true"
-            ></span>
-          </p>
+        <div class="container hero-content">
+          <div class="hero-text" data-aos="fade-up" data-aos-delay="100">
+            <div class="hero-greeting">
+              <span class="greeting-icon"><i class="bi bi-hand-thumbs-up"></i></span>
+              <span>Hello, I'm</span>
+            </div>
+            <h1 class="hero-name">
+              <span class="name-highlight">Abdul</span> Sammad
+            </h1>
+            <div class="hero-role">
+              <span class="role-prefix">I'm a</span>
+              <span
+                class="typed"
+                data-typed-items="Full Stack Developer, MERN Stack Specialist, Software Engineer, Web3 Developer"
+                >Web3 Developer</span
+              >
+              <span
+                class="typed-cursor typed-cursor--blink"
+                aria-hidden="true"
+              ></span>
+            </div>
+            <p class="hero-description">
+              Passionate about building scalable web applications and innovative solutions
+              that drive business growth and enhance user experiences.
+            </p>
+            <div class="hero-buttons">
+              <a href="#portfolio" class="btn-primary">
+                <span>View My Work</span>
+                <i class="bi bi-arrow-right"></i>
+              </a>
+              <a href="#contact" class="btn-secondary">
+                <span>Get In Touch</span>
+                <i class="bi bi-envelope"></i>
+              </a>
+            </div>
+          </div>
+          <div class="hero-scroll" data-aos="fade-up" data-aos-delay="600">
+            <a href="#about" class="scroll-indicator">
+              <span>Scroll Down</span>
+              <i class="bi bi-arrow-down"></i>
+            </a>
+          </div>
         </div>
       </section>
       <!-- /Hero Section -->
@@ -942,205 +971,167 @@
       <section id="services" class="services section">
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
-          
+          <p>Comprehensive solutions to transform your digital presence</p>
         </div>
         <div class="container">
-          <div class="row gy-4">
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-briefcase"></i>
+          <div class="services-grid">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-briefcase"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Custom Web Apps</a>
-                </h4>
-                <p class="description">
-                  Responsive, high-performance web applications tailored to
-                  business needs, with a focus on scalability, security, and
-                  seamless user experience.
-                </p>
+              <h4 class="service-title">Custom Web Apps</h4>
+              <p class="service-description">
+                Responsive, high-performance web applications tailored to business needs, with a focus on scalability, security, and seamless user experience.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="fa-solid fa-robot"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="150">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="fa-solid fa-robot"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Artificial Intelligence</a>
-                </h4>
-                <p class="description">
-                  AI-driven solutions including NLP and predictive analytics,
-                  with seamless API integrations and custom model training to
-                  enhance automation and decision-making.
-                </p>
+              <h4 class="service-title">Artificial Intelligence</h4>
+              <p class="service-description">
+                AI-driven solutions including NLP and predictive analytics, with seamless API integrations and custom model training to enhance automation and decision-making.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-card-checklist"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-card-checklist"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">E-Commerce Sites</a>
-                </h4>
-                <p class="description">
-                  Custom e-commerce platforms with product catalogs, secure
-                  checkout, inventory management, and analytics, optimized for
-                  seamless shopping across mobile and desktop
-                </p>
+              <h4 class="service-title">E-Commerce Sites</h4>
+              <p class="service-description">
+                Custom e-commerce platforms with product catalogs, secure checkout, inventory management, and analytics, optimized for seamless shopping across mobile and desktop.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-credit-card"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="250">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-credit-card"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Payment Gateway Integration</a>
-                </h4>
-                <p class="description">
-                  Secure payment gateway integrations supporting multiple
-                  currencies and methods, ensuring fast, reliable, and online
-                  transactions.
-                </p>
+              <h4 class="service-title">Payment Gateway Integration</h4>
+              <p class="service-description">
+                Secure payment gateway integrations supporting multiple currencies and methods, ensuring fast, reliable, and online transactions.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-cloud"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-cloud"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Software as a Service (SaaS)</a>
-                </h4>
-                <p class="description">
-                  Scalable SaaS applications with secure multi-tenant
-                  architecture, subscription management, and cloud deployment to
-                  support long-term growth and efficiency.
-                </p>
+              <h4 class="service-title">Software as a Service (SaaS)</h4>
+              <p class="service-description">
+                Scalable SaaS applications with secure multi-tenant architecture, subscription management, and cloud deployment to support long-term growth and efficiency.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-boxes"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="350">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-boxes"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title"><a class="stretched-link">Web3 APIs</a></h4>
-                <p class="description">
-                  Custom and third-party Web3 API integrations for NFTs, DeFi
-                  platforms, and blockchain data, enabling secure and efficient
-                  interaction with smart contracts and decentralized ecosystems.
-                </p>
+              <h4 class="service-title">Web3 APIs</h4>
+              <p class="service-description">
+                Custom and third-party Web3 API integrations for NFTs, DeFi platforms, and blockchain data, enabling secure and efficient interaction with smart contracts and decentralized ecosystems.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-diagram-3"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">API Development</a>
-                </h4>
-                <p class="description">
-                  Secure and scalable backend APIs built with Node.js,
-                  Express.js, and AdonisJS, supporting RESTful and GraphQL
-                  architectures for fast and reliable data exchange.
-                </p>
+              <h4 class="service-title">API Development</h4>
+              <p class="service-description">
+                Secure and scalable backend APIs built with Node.js, Express.js, and AdonisJS, supporting RESTful and GraphQL architectures for fast and reliable data exchange.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-layers"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="450">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-layers"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Full Stack Development</a>
-                </h4>
-                <p class="description">
-                  End-to-end development with the MERN stack, from intuitive
-                  UI/UX to robust backend infrastructure, delivering fully
-                  functional and production-ready web applications.
-                </p>
+              <h4 class="service-title">Full Stack Development</h4>
+              <p class="service-description">
+                End-to-end development with the MERN stack, from intuitive UI/UX to robust backend infrastructure, delivering fully functional and production-ready web applications.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-speedometer2"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Custom Management Systems</a>
-                </h4>
-                <p class="description">
-                  Tailored management systems designed to streamline operations,
-                  enhance productivity, reduce errors, and deliver real-time
-                  insights through advanced reporting tools.
-                </p>
+              <h4 class="service-title">Custom Management Systems</h4>
+              <p class="service-description">
+                Tailored management systems designed to streamline operations, enhance productivity, reduce errors, and deliver real-time insights through advanced reporting tools.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
 
-            <div
-              class="col-lg-4 col-md-6 service-item d-flex"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <div class="icon flex-shrink-0">
-                <i class="bi bi-search"></i>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="550">
+              <div class="service-icon-wrapper">
+                <div class="service-icon">
+                  <i class="bi bi-search"></i>
+                </div>
+                <div class="service-icon-bg"></div>
               </div>
-              <div>
-                <h4 class="title">
-                  <a class="stretched-link">Web Scrapers</a>
-                </h4>
-                <p class="description">
-                  Efficient web scraping tools to extract, process, and
-                  structure large volumes of data with accuracy, speed, and
-                  compliance for analytics, research, or business intelligence.
-                </p>
+              <h4 class="service-title">Web Scrapers</h4>
+              <p class="service-description">
+                Efficient web scraping tools to extract, process, and structure large volumes of data with accuracy, speed, and compliance for analytics, research, or business intelligence.
+              </p>
+              <div class="service-link">
+                <i class="bi bi-arrow-right"></i>
               </div>
             </div>
           </div>
@@ -1149,7 +1140,6 @@
       <!-- /Services Section -->
 
       <!-- Certificates Section -->
-     
 
       <section id="certificates" class="certificates section light-background">
         <div class="container">
