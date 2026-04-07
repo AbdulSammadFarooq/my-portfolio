@@ -42,10 +42,6 @@
       rel="stylesheet"
     />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
@@ -60,6 +56,7 @@
           src="assets/img/react-js.jpg"
           alt=""
           class="img-fluid rounded-circle"
+          decoding="async"
         />
       </div>
 
@@ -129,6 +126,8 @@
             alt="Hero Background"
             data-aos="fade-in"
             class="hero-image"
+            fetchpriority="high"
+            decoding="async"
           />
           <div class="hero-overlay"></div>
           <div class="hero-particles"></div>
@@ -181,7 +180,7 @@
       <!-- /Hero Section -->
 
       <!-- About Section -->
-      <section id="about" class="about section">
+      <section id="about" class="about section section-animate" data-aos="fade-up">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>About</h2>
@@ -204,7 +203,7 @@
           <div class="about-content">
             <div class="about-image-wrapper" data-aos="fade-right" data-aos-delay="100">
               <div class="about-image">
-                <img src="assets/img/user.gif" class="img-fluid" alt="Abdul Sammad - Full Stack Developer" />
+                <img src="assets/img/user.gif" class="img-fluid" alt="Abdul Sammad - Full Stack Developer" loading="lazy" decoding="async" />
                 <div class="about-image-overlay">
                   <div class="about-image-badge">
                     <i class="bi bi-code-slash"></i>
@@ -272,7 +271,7 @@
       <!-- /About Section -->
 
       <!-- Skills Section -->
-      <section id="skills" class="skills section light-background">
+      <section id="skills" class="skills section light-background section-animate" data-aos="fade-up">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Skills</h2>
@@ -492,9 +491,115 @@
       </section>
       <!-- /Skills Section -->
 
-     
+      <!-- Tech Stack Marquee Section -->
+      <section class="tech-marquee-section section-animate" aria-label="Tech stack marquee" data-aos="fade-up">
+        <div class="marquee-wrapper">
+          <div class="marquee-content">
+            <div class="tech-icon">
+              <i class="devicon-javascript-plain"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-react-original"></i>
+              <span>React</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-nodejs-plain"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-nextjs-plain"></i>
+              <span>Next.js</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-nestjs-plain"></i>
+              <span>NestJS</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-typescript-plain"></i>
+              <span>TypeScript</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-mongodb-plain"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-mysql-plain"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-express-original"></i>
+              <span>Express</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-firebase-plain"></i>
+              <span>Firebase</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-git-plain"></i>
+              <span>Git</span>
+            </div>
+            <div class="tech-icon">
+              <i class="fab fa-ethereum"></i>
+              <span>Web3</span>
+            </div>
+
+            <!-- Duplicate for seamless loop -->
+            <div class="tech-icon">
+              <i class="devicon-javascript-plain"></i>
+              <span>JavaScript</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-react-original"></i>
+              <span>React</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-nodejs-plain"></i>
+              <span>Node.js</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-nextjs-plain"></i>
+              <span>Next.js</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-nestjs-plain"></i>
+              <span>NestJS</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-typescript-plain"></i>
+              <span>TypeScript</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-mongodb-plain"></i>
+              <span>MongoDB</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-mysql-plain"></i>
+              <span>MySQL</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-express-original"></i>
+              <span>Express</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-firebase-plain"></i>
+              <span>Firebase</span>
+            </div>
+            <div class="tech-icon">
+              <i class="devicon-git-plain"></i>
+              <span>Git</span>
+            </div>
+            <div class="tech-icon">
+              <i class="fab fa-ethereum"></i>
+              <span>Web3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- /Tech Stack Marquee Section -->
+
       <!-- Resume Section -->
-      <section id="resume" class="resume section">
+      <section id="resume" class="resume section section-animate" data-aos="fade-up">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Resume</h2>
@@ -679,7 +784,7 @@
       <!-- /Resume Section -->
 
       <!-- Portfolio Section -->
-      <section id="portfolio" class="portfolio section light-background">
+      <section id="portfolio" class="portfolio section light-background section-animate" data-aos="fade-up">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
           <h2>Portfolio</h2>
@@ -697,7 +802,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="100">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/exs.png" alt="Ex Sports NFT Marketplace">
+                  <img src="assets/img/portfolio/exs.png" alt="Ex Sports NFT Marketplace" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -730,7 +835,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="200">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/outlaw.webp" alt="Outlaw Digital Wallet">
+                  <img src="assets/img/portfolio/outlaw.webp" alt="Outlaw Digital Wallet" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -763,7 +868,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="300">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/reward.png" alt="Reward Marketplace">
+                  <img src="assets/img/portfolio/reward.png" alt="Reward Marketplace" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -796,7 +901,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="400">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/chains-pilot.png" alt="Chains Pilot">
+                  <img src="assets/img/portfolio/chains-pilot.png" alt="Chains Pilot" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -829,7 +934,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="500">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/alhejin.png" alt="Al-Hejin Camel Marketplace">
+                  <img src="assets/img/portfolio/alhejin.png" alt="Al-Hejin Camel Marketplace" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -862,7 +967,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="600">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/outlaw-cms.png" alt="Outlaw CMS">
+                  <img src="assets/img/portfolio/outlaw-cms.png" alt="Outlaw CMS" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-lock-fill"></i>
@@ -893,7 +998,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="700">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/coinguard.png" alt="Coin Guard Wallet">
+                  <img src="assets/img/portfolio/coinguard.png" alt="Coin Guard Wallet" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -926,7 +1031,7 @@
             <div class="portfolio-card" data-aos="fade-up" data-aos-delay="800">
               <div class="portfolio-image-wrapper">
                 <div class="portfolio-image">
-                  <img src="assets/img/portfolio/scan.png" alt="Scan & Trace">
+                  <img src="assets/img/portfolio/scan.png" alt="Scan & Trace" loading="lazy" decoding="async">
                   <div class="portfolio-overlay">
                     <div class="portfolio-overlay-content">
                       <i class="bi bi-eye-fill"></i>
@@ -960,7 +1065,7 @@
       </section>
 
       <!-- Services Section -->
-      <section id="services" class="services section">
+      <section id="services" class="services section section-animate" data-aos="fade-up">
         <div class="container section-title" data-aos="fade-up">
           <h2>Services</h2>
           <p>Comprehensive solutions to transform your digital presence</p>
@@ -1133,7 +1238,7 @@
 
       <!-- Certificates Section -->
 
-      <section id="certificates" class="certificates section light-background">
+      <section id="certificates" class="certificates section light-background section-animate" data-aos="fade-up">
         <div class="container">
           <div class="section-title" data-aos="fade-up">
             <h2>Certificates</h2>
@@ -1143,7 +1248,7 @@
             <div class="certificate-card" data-aos="fade-up" data-aos-delay="100">
               <div class="certificate-image-wrapper">
                 <div class="certificate-image">
-                  <img src="/assets/img/certificates/system-design.png" alt="Front-end System Design Certificate">
+                  <img src="assets/img/certificates/system-design.png" alt="Front-end System Design Certificate" loading="lazy" decoding="async">
                   <div class="certificate-overlay">
                     <i class="bi bi-eye-fill"></i>
                   </div>
@@ -1181,7 +1286,7 @@
             <div class="certificate-card" data-aos="fade-up" data-aos-delay="200">
               <div class="certificate-image-wrapper">
                 <div class="certificate-image">
-                  <img src="/assets/img/certificates/react.jpg" alt="React JS Course Certificate">
+                  <img src="assets/img/certificates/react.jpg" alt="React JS Course Certificate" loading="lazy" decoding="async">
                   <div class="certificate-overlay">
                     <i class="bi bi-eye-fill"></i>
                   </div>
@@ -1220,7 +1325,7 @@
             <div class="certificate-card" data-aos="fade-up" data-aos-delay="300">
               <div class="certificate-image-wrapper">
                 <div class="certificate-image">
-                  <img src="/assets/img/certificates/mongo.jpg" alt="MongoDB Certificate">
+                  <img src="assets/img/certificates/mongo.jpg" alt="MongoDB Certificate" loading="lazy" decoding="async">
                   <div class="certificate-overlay">
                     <i class="bi bi-eye-fill"></i>
                   </div>
@@ -1259,7 +1364,7 @@
             <div class="certificate-card" data-aos="fade-up" data-aos-delay="400">
               <div class="certificate-image-wrapper">
                 <div class="certificate-image">
-                  <img src="/assets/img/certificates/MERN.png" alt="MERN Stack Certificate">
+                  <img src="assets/img/certificates/MERN.png" alt="MERN Stack Certificate" loading="lazy" decoding="async">
                   <div class="certificate-overlay">
                     <i class="bi bi-eye-fill"></i>
                   </div>
@@ -1298,7 +1403,7 @@
             <div class="certificate-card" data-aos="fade-up" data-aos-delay="500">
               <div class="certificate-image-wrapper">
                 <div class="certificate-image">
-                  <img src="/assets/img/certificates/git.jpg" alt="Git Certificate">
+                  <img src="assets/img/certificates/git.jpg" alt="Git Certificate" loading="lazy" decoding="async">
                   <div class="certificate-overlay">
                     <i class="bi bi-eye-fill"></i>
                   </div>
@@ -1337,7 +1442,7 @@
             <div class="certificate-card" data-aos="fade-up" data-aos-delay="600">
               <div class="certificate-image-wrapper">
                 <div class="certificate-image">
-                  <img src="/assets/img/certificates/certificate.jpg" alt="Appreciation Certificate">
+                  <img src="assets/img/certificates/certificate.jpg" alt="Appreciation Certificate" loading="lazy" decoding="async">
                   <div class="certificate-overlay">
                     <i class="bi bi-eye-fill"></i>
                   </div>
@@ -1391,11 +1496,6 @@
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
