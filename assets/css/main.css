@@ -241,6 +241,10 @@ h6 {
   background-color: #2711f2;
 } /* Orange */
 
+.tailwind {
+  background-color: #38bdf8;
+} /* Tailwind Cyan */
+
 /* PHP Email Form Messages
 ------------------------------*/
 .php-email-form .error-message {
@@ -608,6 +612,44 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# WhatsApp Floating Button
+--------------------------------------------------------------*/
+.whatsapp-float {
+  position: fixed;
+  right: 15px;
+  bottom: 70px;
+  z-index: 99998;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #25d366, #128c7e);
+  color: #fff;
+  box-shadow: 0 6px 20px color-mix(in srgb, #25d366, transparent 50%);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.whatsapp-float i {
+  font-size: 26px;
+  line-height: 0;
+}
+
+.whatsapp-float:hover {
+  color: #fff;
+  transform: scale(1.06);
+  box-shadow: 0 8px 24px color-mix(in srgb, #25d366, transparent 35%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    transition: none;
+  }
+
+  .whatsapp-float:hover {
+    transform: none;
+  }
+}
+
+/*--------------------------------------------------------------
 # Disable aos animation delay on mobile devices
 --------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
@@ -803,6 +845,44 @@ section,
   z-index: 1;
 }
 
+.hero-background::before,
+.hero-background::after {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 1;
+  pointer-events: none;
+  filter: blur(40px);
+  opacity: 0.35;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.hero-background::before {
+  background:
+    radial-gradient(closest-side, rgba(20, 157, 221, 0.55), transparent 60%),
+    radial-gradient(closest-side, rgba(102, 126, 234, 0.45), transparent 60%);
+  background-position: 10% 30%, 80% 70%;
+  background-size: 55% 55%, 60% 60%;
+  background-repeat: no-repeat;
+  animation: heroGlowDriftA 18s ease-in-out infinite;
+}
+
+.hero-background::after {
+  background:
+    radial-gradient(closest-side, rgba(255, 255, 255, 0.12), transparent 60%),
+    radial-gradient(closest-side, rgba(20, 157, 221, 0.35), transparent 60%);
+  background-position: 70% 25%, 25% 80%;
+  background-size: 45% 45%, 55% 55%;
+  background-repeat: no-repeat;
+  animation: heroGlowDriftB 22s ease-in-out infinite;
+}
+
+.hero-background > * {
+  position: relative;
+  z-index: 2;
+}
+
 .hero-image {
   position: absolute;
   inset: 0;
@@ -810,15 +890,38 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
-  animation: heroImageZoom 20s ease-in-out infinite;
+  transform-origin: 50% 50%;
+  will-change: transform;
+  animation: heroImageKenBurns 22s ease-in-out infinite alternate;
 }
 
-@keyframes heroImageZoom {
-  0%, 100% {
-    transform: scale(1);
+@keyframes heroImageKenBurns {
+  0% {
+    transform: scale(1.04) translate3d(-1.2%, -1%, 0) rotate(-0.2deg);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.1) translate3d(1.2%, -1.2%, 0) rotate(0.15deg);
+  }
+  100% {
+    transform: scale(1.06) translate3d(1%, 1.1%, 0) rotate(-0.1deg);
+  }
+}
+
+@keyframes heroGlowDriftA {
+  0%, 100% {
+    transform: translate3d(-2%, -1%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(2%, 1%, 0) scale(1.06);
+  }
+}
+
+@keyframes heroGlowDriftB {
+  0%, 100% {
+    transform: translate3d(1%, -2%, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-2%, 2%, 0) scale(1.08);
   }
 }
 
@@ -855,6 +958,15 @@ section,
   }
   50% {
     background-position: 100% 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-image,
+  .hero-particles,
+  .hero-background::before,
+  .hero-background::after {
+    animation: none !important;
   }
 }
 
