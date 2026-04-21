@@ -150,4 +150,37 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  /**
+   * Resume CTA: click burst animation (lightweight)
+   */
+  function createBurstParticles(buttonEl, count = 14) {
+    if (!buttonEl) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    const colors = ['#61dafb', '#149ddd', '#667eea', '#ffffff'];
+    const rect = buttonEl.getBoundingClientRect();
+    const isSmall = rect.width < 260;
+    const spread = isSmall ? 80 : 110;
+
+    for (let i = 0; i < count; i++) {
+      const p = document.createElement('span');
+      p.className = 'burst-particle';
+      p.style.background = colors[i % colors.length];
+      p.style.setProperty('--dx', `${(Math.random() * 2 - 1) * spread}px`);
+      p.style.setProperty('--dy', `${(Math.random() * 2 - 1) * spread}px`);
+      p.style.width = `${6 + Math.random() * 6}px`;
+      p.style.height = p.style.width;
+      p.style.filter = 'blur(0.2px)';
+      buttonEl.appendChild(p);
+
+      window.setTimeout(() => {
+        p.remove();
+      }, 780);
+    }
+  }
+
+  document.querySelectorAll('[data-resume-download]').forEach((btn) => {
+    btn.addEventListener('click', () => createBurstParticles(btn, 16));
+  });
+
 })();
