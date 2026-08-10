@@ -151,36 +151,38 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
   /**
-   * Resume CTA: click burst animation (lightweight)
+   * Skills marquee — clone each unique group once for a seamless loop
    */
-  function createBurstParticles(buttonEl, count = 14) {
-    if (!buttonEl) return;
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  document.querySelectorAll('.skills-marquee .marquee-content').forEach((content) => {
+    const group = content.querySelector('.marquee-group');
+    if (!group) return;
 
-    const colors = ['#61dafb', '#149ddd', '#667eea', '#ffffff'];
-    const rect = buttonEl.getBoundingClientRect();
-    const isSmall = rect.width < 260;
-    const spread = isSmall ? 80 : 110;
-
-    for (let i = 0; i < count; i++) {
-      const p = document.createElement('span');
-      p.className = 'burst-particle';
-      p.style.background = colors[i % colors.length];
-      p.style.setProperty('--dx', `${(Math.random() * 2 - 1) * spread}px`);
-      p.style.setProperty('--dy', `${(Math.random() * 2 - 1) * spread}px`);
-      p.style.width = `${6 + Math.random() * 6}px`;
-      p.style.height = p.style.width;
-      p.style.filter = 'blur(0.2px)';
-      buttonEl.appendChild(p);
-
-      window.setTimeout(() => {
-        p.remove();
-      }, 780);
-    }
-  }
-
-  document.querySelectorAll('[data-resume-download]').forEach((btn) => {
-    btn.addEventListener('click', () => createBurstParticles(btn, 16));
+    const clone = group.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    content.appendChild(clone);
   });
+
+  /**
+   * Subtle 3D tilt on portfolio cards
+   */
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!prefersReducedMotion) {
+    document.querySelectorAll('.portfolio-card').forEach((card) => {
+      card.addEventListener('pointermove', (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = (event.clientX - rect.left) / rect.width;
+        const y = (event.clientY - rect.top) / rect.height;
+        const tiltX = ((0.5 - y) * 6).toFixed(2);
+        const tiltY = ((x - 0.5) * 8).toFixed(2);
+        card.style.setProperty('--tilt-x', `${tiltX}deg`);
+        card.style.setProperty('--tilt-y', `${tiltY}deg`);
+      });
+
+      card.addEventListener('pointerleave', () => {
+        card.style.setProperty('--tilt-x', '0deg');
+        card.style.setProperty('--tilt-y', '0deg');
+      });
+    });
+  }
 
 })();
