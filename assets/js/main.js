@@ -185,4 +185,30 @@
     });
   }
 
+  /**
+   * About highlight: add animation when about section enters viewport
+   */
+  (function aboutHighlight() {
+    const aboutEl = document.querySelector('.about-highlight');
+    if (!aboutEl) return;
+
+    const opts = {
+      root: null,
+      rootMargin: '0px 0px -10% 0px',
+      threshold: 0.15
+    };
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          aboutEl.classList.add('highlight-animate');
+        } else {
+          aboutEl.classList.remove('highlight-animate');
+        }
+      });
+    }, opts);
+
+    io.observe(aboutEl);
+  })();
+
 })();

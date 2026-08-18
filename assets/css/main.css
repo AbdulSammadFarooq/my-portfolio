@@ -782,6 +782,67 @@ section,
 }
 
 /*--------------------------------------------------------------
+# About highlight animation
+--------------------------------------------------------------*/
+.about-highlight {
+  position: relative;
+  display: block;
+  padding: 14px;
+  border-radius: 12px;
+  transition: box-shadow 320ms ease, transform 320ms ease;
+  background: linear-gradient(180deg, transparent 0%, transparent 100%);
+  overflow: hidden;
+}
+
+.about-highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(27,181,102,0.06), rgba(20,157,221,0.06), rgba(102,126,234,0.04));
+  background-size: 200% 100%;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 420ms ease, transform 420ms ease;
+}
+
+.about-highlight > * {
+  position: relative;
+  z-index: 1;
+}
+
+.about-highlight.highlight-animate::before {
+  opacity: 1;
+  transform: translateY(0);
+  animation: highlightShimmer 3s linear infinite;
+}
+
+@keyframes highlightShimmer {
+  0% { background-position: -100% 0; }
+  50% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+.about-highlight.highlight-animate {
+  box-shadow: 0 12px 40px color-mix(in srgb, var(--accent-color), transparent 80%);
+  transform: translateY(-4px);
+}
+
+.about-highlight:hover {
+  box-shadow: 0 14px 48px color-mix(in srgb, var(--accent-color), transparent 65%);
+  transform: translateY(-6px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-highlight::before,
+  .about-highlight.highlight-animate::before {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/*--------------------------------------------------------------
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
